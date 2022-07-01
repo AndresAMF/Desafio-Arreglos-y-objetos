@@ -117,7 +117,7 @@ document.querySelector(".btn-warning").addEventListener("click", function () {
 
 
 /*Botón reset, muestra todos los elementos del array, reinicia campos de texto y actualiza el total*/
-document.querySelector(".btn-reset").addEventListener("click", function () {
+document.getElementById("btn-reset").addEventListener("click", function () {
   total = "";
   for (let propiedad of propiedadesJSON) {
     templateFunction(propiedad);
