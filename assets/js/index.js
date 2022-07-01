@@ -74,6 +74,7 @@ window.onload = () => {
     container.innerHTML = template;
     document.getElementById("total").innerHTML = "Total: " + propiedadesJSON.length;
   }
+  /*Se reinicia el template*/
   template = "";
   
 };
@@ -104,12 +105,13 @@ document.querySelector(".btn-warning").addEventListener("click", function () {
     }
     
 
-    if (total == 0 || total == null || total == undefined) {
+    if (total == 0 || total == null || total == undefined || total =="") {
       alert("No se encontraron resultados");
     }
 
     document.getElementById("total").innerHTML = "Total: " + total;
   }
+  /*Se reinicia el template*/
   template = "";
   
 });
@@ -118,7 +120,6 @@ document.querySelector(".btn-warning").addEventListener("click", function () {
 
 /*Botón reset, muestra todos los elementos del array, reinicia campos de texto y actualiza el total*/
 document.getElementById("btn-reset").addEventListener("click", function () {
-  total = "";
   for (let propiedad of propiedadesJSON) {
     templateFunction(propiedad);
     container.innerHTML = template;
@@ -127,6 +128,7 @@ document.getElementById("btn-reset").addEventListener("click", function () {
     document.getElementById("metrosDesde").value = "";
     document.getElementById("metrosHasta").value = "";
   }
+  /*Se reinicia el template*/
   template=""
   
 });
